@@ -22,7 +22,7 @@ LIGHT_GREEN="\[\033[1;32m\]"
       WHITE="\[\033[1;37m\]"
  LIGHT_GRAY="\[\033[0;37m\]"
  COLOR_NONE="\[\033[0m\]"
- 
+
    BOLD_RED="\e[1;31m"
       RESET="\e[0m"
  BOLD_GREEN="\e[1;32m"
@@ -55,7 +55,7 @@ function git-commit-behind-ahead {
 
   fi
 
-  if [ $commit_behind ]; then printf "[\001${BOLD_RED}\002%s\001${RESET}\002|\001${BOLD_GREEN}\002%s\001${RESET}002]" $commit_behind $commit_ahead;  fi
+  if [ $commit_behind ]; then printf "[\001${BOLD_RED}\002%s\001${RESET}\002|\001${BOLD_GREEN}\002%s\001${RESET}\002]" $commit_behind $commit_ahead;  fi
 }
 
  # Determine active Python virtualenv details.
