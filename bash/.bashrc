@@ -130,6 +130,7 @@ eval `keychain --agents ssh --eval ~/.ssh/id_ed25519`
 
 # Add VS Code to the path.
 export PATH=$PATH:'/mnt/c/Users/Mitch/AppData/Local/Programs/Microsoft VS Code/bin'
+export PATH=$PATH:'/mnt/c/Users/User/scoop/apps/vscode/current/bin'
 
 # Bindings for history search
 bind '"\e[A": history-search-backward'
