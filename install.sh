@@ -1,3 +1,7 @@
+# Install brew dependencies
+sudo apt-get update
+sudo apt-get install build-essential procps curl file git -y
+
 # Download Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -6,8 +10,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew update
 brew install \
         gcc \
-        stow \
         git \
+        stow \
         pyenv \
         yarn \
         pipx \
@@ -30,13 +34,6 @@ stow vim
 stow git
 cd ..
 source ~/.bashrc
-
-# Install the latest patch for last 4 minor Python versions.
-py_versions=$(pyenv install --list | grep -v '[a-z]' | grep -Po '\d+\.\d+' | uniq | tail -4)
-for ver in $py_versions; do pyenv install $(pyenv install --list | grep $ver | grep -v '[a-z]' | tail -1); done
-# Set the global Python as the most recent
-latest_py=$(pyenv versions | grep -Po '\d+\.\d+\.\d+' | tail -1)
-pyenv global $latest_py
 
 # Install Python tools using pipx.
 pipx ensurepath

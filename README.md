@@ -2,6 +2,14 @@
 
 ## Install
 
+If starting in root, create a user:
+
+```bash
+adduser mitch
+usermod -aG sudo mitch
+su - mitch
+```
+
 If `git` is needed:
 
 ```bash
@@ -12,14 +20,7 @@ sudo apt-get install git
 Then clone:
 
 ```bash
-https://github.com/mitches-got-glitches/dotfiles.git
-```
-
-Uninstall git (reinstalled with `brew`):
-
-```bash
-sudo apt-get remove git
-sudo apt-get autoremove
+git clone https://github.com/mitches-got-glitches/dotfiles.git
 ```
 
 If needed, add executable privileges to the file:
