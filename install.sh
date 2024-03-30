@@ -20,12 +20,11 @@ brew install \
         nushell \
         jandedobbeleer/oh-my-posh/oh-my-posh
 
-# Install Python dependencies
+# Install Python dependencies in Brew
 brew install openssl readline sqlite3 xz zlib tcl-tk
+# Set the compiler to Brew gcc, pyenv installs will fail without this.
+export CC=/home/linuxbrew/.linuxbrew/bin/gcc-13
 
-# Clone and stow my config dotfiles.
-git clone git@github.com:mitches-got-glitches/dotfiles.git
-cd dotfiles
 # Adopt allows stow if .bashrc already exists. We just restore
 # back to what we had with Git.
 stow --adopt bash

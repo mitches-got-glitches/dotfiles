@@ -5,7 +5,9 @@
 If starting in root, create a user:
 
 ```bash
-adduser mitch
+apt-get update
+apt-get install sudo -y
+adduser --gecos "" mitch
 usermod -aG sudo mitch
 su - mitch
 ```
@@ -14,25 +16,26 @@ If `git` is needed:
 
 ```bash
 sudo apt-get update
-sudo apt-get install git
+sudo apt-get install git -y
 ```
 
 Then clone:
 
 ```bash
 git clone https://github.com/mitches-got-glitches/dotfiles.git
+cd dotfiles
 ```
 
 If needed, add executable privileges to the file:
 
 ```bash
-chmod +x ./dotfiles/install.sh
+chmod +x ./install.sh
 ```
 
 Then run the install script:
 
 ```bash
-./dotfiles/install.sh
+./install.sh
 ```
 
 ## Useful branches

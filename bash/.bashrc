@@ -125,6 +125,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+# Set the compiler to Brew gcc, pyenv installs will fail without this.
+export CC=/home/linuxbrew/.linuxbrew/bin/gcc-13
+
 # Start a keychain agent.
 eval `keychain --agents ssh --eval ~/.ssh/id_ed25519`
 
