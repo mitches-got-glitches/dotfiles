@@ -32,6 +32,7 @@ stow --adopt bash
 git restore .
 stow vim
 stow git
+stow nu
 cd ..
 source ~/.bashrc
 
