@@ -50,6 +50,9 @@ pipx install pre-commit
 pipx install mypy
 pipx install poetry
 pipx install mkdocs
+pipx inject mkdocs mkdocs-material[imaging]
+pipx inject mkdocs mkdocstrings[python]
+pipx inject mkdocs mkdocs-glightbox
 pipx install jupyter
 pipx install asciinema
 
