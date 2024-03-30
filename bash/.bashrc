@@ -126,6 +126,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 # Set the compiler to Brew gcc, pyenv installs will fail without this.
+# https://github.com/pyenv/pyenv/issues/2823
 export CC=/home/linuxbrew/.linuxbrew/bin/gcc-13
 
 # Start a keychain agent.
