@@ -26,6 +26,9 @@ brew install openssl readline sqlite3 xz zlib tcl-tk
 # Set the compiler to Brew gcc, pyenv installs will fail without this.
 export CC=/home/linuxbrew/.linuxbrew/bin/gcc-13
 
+# Install dependencies for image processing (for mkdocs material)
+brew install cairo freetype libffi libjpeg libpng zlib
+
 # Adopt allows stow if .bashrc already exists. We just restore
 # back to what we had with Git.
 stow --adopt bash
