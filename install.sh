@@ -1,6 +1,6 @@
 # Install brew dependencies
-sudo apt-get update
-sudo apt-get install build-essential procps curl file git -y
+apt-get update
+apt-get install build-essential procps curl file git -y
 
 # Download Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -13,9 +13,9 @@ brew install \
         git \
         stow \
         pyenv \
+        pipx \
         node \
         yarn \
-        pipx \
         keychain \
         bat \
         nushell \
@@ -36,8 +36,9 @@ git restore .
 stow vim
 stow git
 stow nu
-cd ..
-source ~/.bashrc
+
+brew upgrade pyenv
+./install_python_versions.sh 2
 
 # Install Python tools using pipx.
 pipx ensurepath

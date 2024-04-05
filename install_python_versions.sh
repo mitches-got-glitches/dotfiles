@@ -25,6 +25,8 @@ if ! [ -z "$1" ]; then
   n_vers=$1
 fi
 
+# Update pyenv to make sure it can see the latest versions.
+brew upgrade pyenv
 # Install the latest patch for last n minor Python versions.
 py_versions=$(pyenv install --list | grep -v '[a-z]' | grep -Po '\d+\.\d+' | uniq | tail -$n_vers | tac)
 for ver in $py_versions; do pyenv install $(pyenv install --list | grep $ver | grep -v '[a-z]' | tail -1); done
